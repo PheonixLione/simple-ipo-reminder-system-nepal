@@ -34,6 +34,19 @@ Open your Command Prompt (CMD) and run:
 ```bash
 pip install requests beautifulsoup4 nepali-datetime
 ```
+### Important Notes Before Running the Script
+
+1. **Initial Run**: Run the script once to check if it works correctly.  
+   - If any issues occur, troubleshoot and resolve them using AI or other tools before proceeding to the next step.
+
+2. **JSON File Handling**:  
+   - Each time you make changes to the code or run it for testing, **delete the `ipo_history.json` file** before running the script.  
+   - This ensures that old alert history does not interfere with testing.  
+
+3. **After Successful Run**:  
+   - Once the script runs correctly and alerts are working as expected, **do not delete the JSON file**.  
+   - Leave it as is and continue with the next steps.
+
 ## 🛠️ Step 3: Setting Up Windows Task Scheduler
 
 To make the script run automatically every day at 2:35 PM:
