@@ -63,8 +63,8 @@ To make the script run automatically every day at 2:35 PM:
 
 4. **Actions Tab**:
    - Click "New" → Start a program
-   - **Program/script**: `python.exe`
-   - **Add arguments**: `"C:\Scripts\ipo_reminder.py"`
+   - **Program/script**: `cmd.exe`
+   - **Add arguments**: `"/c python "C:\Scripts\ipo_reminder.py""`
    - **Start in**: `C:\Scripts`
 
 5. **Conditions Tab**:
