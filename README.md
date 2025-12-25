@@ -111,8 +111,32 @@ Once the test is successful:
 
 ## 🖥️ Technologies Used
 
-- Python 3.x  
-- BeautifulSoup4 (Web Scraping)  
-- Tkinter (Desktop UI)  
-- Regex (Advanced Pattern Matching)  
-- Windows Task Scheduler (Automation)
+- **Python 3.x**  
+  Core programming language used for the entire system.
+
+- **Requests**  
+  Fetches IPO data from the Merolagani website.
+
+- **BeautifulSoup4**  
+  Parses and extracts relevant IPO information from HTML content.
+
+- **Regex (re module)**  
+  Detects company names and extracts IPO opening and closing dates from text.
+
+- **nepali-datetime**  
+  Converts Nepali calendar dates into English (AD) dates for accurate reminders.
+
+- **Tkinter**  
+  Displays desktop popup alerts for IPO notifications.
+
+- **JSON**  
+  Stores IPO details and alert history persistently.
+
+- **OS & File Handling**  
+  Manages folders and files for local data storage.
+
+- **Datetime**  
+  Handles date calculations and reminder logic.
+
+- **Windows Task Scheduler**  
+  Automates daily execution of the script.
