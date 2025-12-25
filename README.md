@@ -63,8 +63,8 @@ To make the script run automatically every day at 2:35 PM:
 
 4. **Actions Tab**:
    - Click "New" → Start a program
-   - **Program/script**: `python.exe`
-   - **Add arguments**: `"C:\Scripts\ipo_reminder.py"`
+   - **Program/script**: `cmd.exe`
+   - **Add arguments**: `"/c python "C:\Scripts\ipo_reminder.py"`
    - **Start in**: `C:\Scripts`
 
 5. **Conditions Tab**:
@@ -76,6 +76,23 @@ To make the script run automatically every day at 2:35 PM:
    - Check "If the task fails, restart every 1 hour"
 
 ---
+
+### ✅ Final Testing (Recommended)
+
+To confirm that everything is working correctly:
+
+1. Go to the `C:\Scripts` folder and **delete the `ipo_history.json` file**.
+2. Open **Windows Task Scheduler**.
+3. Edit the existing task (`Nepal_IPO_Alert`).
+4. In the **Triggers** tab, temporarily change the scheduled time to **2 minutes ahead of the current time on your PC**.
+5. Save the task and wait.
+
+If the setup is correct, you should receive a **desktop popup notification** within a few minutes.
+
+Once the test is successful:
+- Change the trigger time back to your preferred schedule.
+- Do **not** delete the JSON file again.
+
 
 ## ⚙️ How it Works
 
