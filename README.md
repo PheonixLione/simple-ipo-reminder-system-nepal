@@ -40,11 +40,13 @@ pip install requests beautifulsoup4 nepali-datetime
    - If any issues occur, troubleshoot and resolve them using AI or other tools before proceeding to the next step.
 
 2. **JSON File Handling**:  
-   - Each time you make changes to the code or run it for testing, **delete the `ipo_history.json` file** before running the script.  
+   - Each time you make changes to the code or run it for testing, **delete the `alert_history.json` and `ipo_database.json` file** before running the script.  
    - This ensures that old alert history does not interfere with testing.  
+   
+3. **Remember that both JSON files will only appear after you run the code for the first time.**
 
 3. **After Successful Run**:  
-   - Once the script runs correctly and alerts are working as expected, **do not delete the JSON file**.  
+   - Once the script runs correctly and alerts are working as expected, **do not delete any of the JSON files**.  
    - Leave it as is and continue with the next steps.
 
 ## 🛠️ Step 3: Setting Up Windows Task Scheduler
@@ -81,7 +83,7 @@ To make the script run automatically every day at 2:35 PM:
 
 To confirm that everything is working correctly:
 
-1. Go to the `C:\Scripts` folder and **delete the `ipo_history.json` file**.
+1. Go to the `C:\Scripts` folder and **delete the both `alert_history.json` and `ipo_database.json` files**.
 2. Open **Windows Task Scheduler**.
 3. Edit the existing task (`Nepal_IPO_Alert`).
 4. In the **Triggers** tab, temporarily change the scheduled time to **2 minutes ahead of the current time on your PC**.
@@ -91,7 +93,7 @@ If the setup is correct, you should receive a **desktop popup notification** wit
 
 Once the test is successful:
 - Change the trigger time back to your preferred schedule.
-- Do **not** delete the JSON file again.
+- Do **not** delete any of the JSON files again.
 
 
 ## ⚙️ How it Works
