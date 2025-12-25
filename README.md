@@ -96,16 +96,25 @@ Once the test is successful:
 - Do **not** delete any of the JSON files again.
 
 
-## ⚙️ How it Works
+## ⚙️ How It Works
 
-- **Hybrid Scanning**: Uses BeautifulSoup and Regex to find IPO details even if hidden in news paragraphs or non-standard table formats
-- **Memory (JSON)**: Creates `ipo_history.json` in the folder to remember which alerts were already sent. Ensures only **one alert per day per company**
+- **Hybrid Scanning**  
+  Uses **Requests**, **BeautifulSoup**, and **Regex** together to detect IPO details even when they appear inside news paragraphs, mixed text, or non-standard layouts (not just clean tables).
 
-**Alert Logic**:  
-- **1 Day Before**: Fund reminder alert (Check your bank balance!)  
-- **Opening Day**: "IPO Open" notification  
-- **Every 2nd Day**: Mid-issue reminders to keep it on your radar  
-- **Closing Day**: "Last Call" urgent alert
+- **Persistent Memory (JSON)**  
+  Maintains two local files:
+  - `ipo_database.json` → stores active IPO opening and closing dates  
+  - `alert_history.json` → records which alerts were already shown  
+  This ensures **each alert is triggered only once per day per company**, even if the script runs multiple times.
+
+- **Alert Logic**
+  - **1 Day Before Opening** → 💰 *Fund Reminder* (prepare bank balance)
+  - **Opening Day** → 🚀 *IPO Open* notification
+  - **Every 2nd Day During Issue** → 🔔 *Mid-issue reminder* while IPO is still open
+  - **Closing Day** → ⚠️ *Last Day* urgent alert
+
+- **Automation**  
+  The script is scheduled using **Windows Task Scheduler** to run daily without manual execution.
 
 ---
 
